@@ -1,0 +1,28 @@
+<!--头部tab切换部分start-->
+<view class='menu' id='menu'>
+<view class="xuanx-ka {{index==current?'select':''}}" wx:for="{{switchtab}}" wx:key='' data-index="{{index}}" bindtap="switchNav" >{{item.name}}</view>
+</view>
+ <!--头部tab切换部分end-->
+<!--切换内容部分start-->
+<scroll-view class='mySwiper' scroll-y="true" style="height:{{height}}px;overflow-y:scroll">
+      <block wx:for="{{coupons}}" wx:key="">
+        <view class='item'  bindtap='clickDetails' data-orderno='{{item.orderNo}}' data-orderstatus='{{item.orderStatus}}'>
+             <view style='width:160rpx;height:160rpx;'>
+               <image src='./images/o-o.png' style="width:160rpx;height:160rpx;"></image>
+             </view>
+             <view   class='xiang-q'>
+               <view class='title'>{{item.serviceName}}</view>
+               <view class='time' wx:key='index'>开始时间：<text>{{time[index]}}</text></view>
+               <view class='price'>病区床号：<text class='shu-zi'>{{item.inpatientArea}}-{{item.accurateAddress}}</text></view>
+             </view>
+             <view class='cao-z'>
+               <view class='ddan-tai'></view>
+               <view class='ddan-tai'>{{item.patientName}}</view>
+            </view>
+       </view>
+      </block>
+</scroll-view>
+<!--切换内容部分end-->
+<block wx:if="{{show}}">
+<image class='img' src='./images/index.png' style="width:326rpx;height:319rpx;position:absolute;top:220rpx;left:0;right:0;margin:auto;"></image>
+</block>

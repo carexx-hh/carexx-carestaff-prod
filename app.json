@@ -1,0 +1,43 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/income/income",
+        "pages/mine/mine",
+        "pages/scheduling_details/scheduling_details",
+        "pages/personal_information/personal_information",
+        "pages/income_details/income_details",
+        "pages/login/login",
+        "pages/about-us/about-us",
+        "pages/set_phone/set_phone"
+    ],
+    "window": {
+        "backgroundTextStyle": "light"
+    },
+    "tabBar": {
+        "color": "#999",
+        "selectedColor": "#5489FD",
+        "backgroundColor": "#fff",
+        "borderStyle": "black",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "接单",
+                "iconPath": "icons/s.png",
+                "selectedIconPath": "icons/ss.png"
+            },
+            {
+                "pagePath": "pages/income/income",
+                "text": "收入",
+                "iconPath": "icons/d.png",
+                "selectedIconPath": "icons/dd.png"
+            },
+            {
+                "pagePath": "pages/mine/mine",
+                "text": "我的",
+                "iconPath": "icons/m.png",
+                "selectedIconPath": "icons/mm.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}

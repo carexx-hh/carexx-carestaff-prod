@@ -1,0 +1,19 @@
+<view  style='width:100%'>
+<image src='./images/login.png' style='width:770rpx;height:553rpx' class='img'></image>
+<image src='./images/ab.png' style='width:171rpx;height:174rpx' class='ab'></image>
+</view>
+<view class='login'>
+<form bindsubmit="formSubmit">
+<view class='phone'>  
+<input placeholder='请输入手机号码' name='phone' class='input-name' type='text' placeholder-style='font-size:28rpx;color:rgba(165,170,184,1);' bindinput="phoneInput"></input>
+</view>
+<view class='phone' style='border-bottom:1rpx solid #DEE5EB;'>  
+<input placeholder='请输入验证码' name='verifyCode'  class='input-pass' maxlength='6' type='number' placeholder-style='font-size:28rpx;color:rgba(165,170,184,1);' bindinput="codeInput" style='width:50%;border-bottom:none'></input>
+<button class='y-z' hover-class='none' plain="false" disabled='{{disabled}}'  bindtap="bindButtonTap" style="background-color:{{color}}">{{text}}</button>
+</view>
+<view class='phone'>  
+<input placeholder='请输入身份证号码' name='idNo' class='input-pass' type='idcard' placeholder-style='font-size:28rpx;color:rgba(165,170,184,1);' bindinput="passInput"></input>
+</view>
+<button class="button"  form-type='submit' open-type="getUserInfo" bindgetuserinfo="getUserInfo">申请验证</button>
+</form>
+</view>

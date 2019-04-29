@@ -1,0 +1,64 @@
+.img{
+  position: relative;
+  top:-17rpx;
+  left:-20rpx;
+}
+.ab{
+  position:absolute;
+  top:20rpx;
+  left:289rpx;
+  z-index: 999
+}
+.login{
+  position: absolute;
+  top:284rpx;
+  left:30rpx;
+  width:690rpx;
+  height:741rpx;
+  background:rgba(255,255,255,1);
+ box-shadow:0px 4px 8px 0px rgba(197, 201, 199, 0.35);
+  border-radius:20rpx;
+  padding: 0 60rpx;
+  box-sizing: border-box;
+}
+.login .phone{
+  display: flex;
+  width: 100%;
+  align-items:center;
+}
+.login .phone .y-z {
+width:50%;
+display:flex;
+justify-content:flex-end;
+font-size:30rpx;
+color:rgba(97,143,255,1);
+border:none;
+}
+.login .input-name{
+  margin-top: 80rpx;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+  height: 120rpx;
+  width: 100%;
+  line-height: 120rpx;
+  border-bottom: 1rpx solid #DEE5EB;
+}
+.login .input-pass{
+  padding: 0 10rpx;
+  box-sizing: border-box;
+  height: 120rpx;
+  line-height: 120rpx;
+  width: 100%;
+  border-bottom: 1rpx solid #DEE5EB;
+}
+.login .button{
+width:560rpx;
+height:88rpx;
+background:linear-gradient(90deg,rgba(87,145,253,1) 12%,rgba(80,120,252,1) 100%);
+border-radius:44rpx;
+margin-top: 120rpx;
+font-size:34rpx;
+font-weight:500;
+color:rgba(255,255,255,1);
+line-height:88rpx;
+}

@@ -1,0 +1,36 @@
+<view class='img' style='width:100%;height:182rpx;text-align:center;margin-top:52rpx;'>
+<image src='{{userInfo.avatarUrl}}' style='width:182rpx;height:182rpx;border-radius:50%;'></image>
+</view>
+<view class='name' style='width:100%;text-align:center;margin-top:20rpx;font-size:28rpx;color:#999999;'>{{info.realName}}</view>
+<view class='info'>
+<!--  -->
+<view class='z_h'>
+<view class='z_h_name'>性别</view>
+<view class='z_h_info'>{{info.sex==0?"未知":(info.sex==1?"男":"女")}}</view>
+</view>
+<!--  -->
+<view class='z_h'>
+<view class='z_h_name'>手机号码</view>
+<view class='z_h_info'>{{info.phone||''}}</view>
+</view>
+<!--  -->
+<view class='z_h'>
+<view class='z_h_name'>身份证</view>
+<view class='z_h_info'>{{info.idNo||''}}</view>
+</view>
+<!--  -->
+<view class='z_h'>
+<view class='z_h_name'>地址</view>
+<view class='z_h_info'>{{info.address||''}}</view>
+</view>
+<!--  -->
+<view class='z_h'>
+<view class='z_h_name' style='width:20%;'>所属医院</view>
+<view class='z_h_info' style='width:80%;'>{{info.instName||''}}</view>
+</view>
+<!--  -->
+<view class='z_h' style='border-bottom:none;'>
+<view class='z_h_name'>服务医院</view>
+<view class='z_h_info'>{{info.serviceInstName||''}}</view>
+</view>
+</view>

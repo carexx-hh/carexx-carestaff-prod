@@ -1,0 +1,46 @@
+<!--头部统计切换部分start-->
+<view class='header'>
+  <view class='time'>
+    <view class='name' style='font-size:30rpx;font-weight:bold;color:#3B404E;'>订单统计</view>
+    <view class='chose_time'style='font-size:24rpx;color:#A5AAB8;width:100%;display:flex;item-align:column;margin-top:20rpx;'>
+      <view class='chose_name'>时间：</view>
+      <picker bindchange="bindTimeChange" name='input_time' value="{{dataArray[index]}}" range="{{dataArray}}"class='picker-time'>
+    <view class="picker" style='font-size:12px;color:#A5AAB8;float:left;'>
+     {{nowData}}
+    <image src='./images/bottom.png' style="width:21rpx;height:11rpx;margin-left:10rpx;margin-bottom:4rpx;"></image>
+    </view>
+  </picker>
+    </view>
+  </view>
+  <view class='order'>
+    <view class='number'>{{coupons.totalOrder}}</view>
+    <view class='name'>完成订单数</view>
+  </view>
+  <view class='money'>
+  <view class='all_m'>{{money}}</view>
+    <view class='name'>总金额(元)</view>
+  </view>
+</view>
+ <!--头部统计部分end-->
+<!--切换内容部分start-->
+<scroll-view class='mySwiper' scroll-y="true" style="overflow-y:scroll">
+      <block wx:for="{{arr3}}" wx:key="">
+        <view class='item'  bindtap='clickDetails' data-orderno='{{item.orderNo}}' data-days='{{timestamp1[index]}}'>
+             <view style='width:160rpx;height:160rpx;'>
+               <image src='./images/img.png' style="width:160rpx;height:160rpx;"></image>
+             </view>
+             <view class='xiang-q'>
+               <view class='title'>{{item.serviceName}}</view>
+               <view class='time' wx:key='index'>服务天数：<text >{{timestamp1[index]}}天</text></view>
+               <view class='price'>患者姓名：<text class='shu-zi'>{{item.realName}}</text></view>
+               <view class='price' style='width:160px;'>病区床号：<text class='shu-zi'>{{item.inpatientArea}}-{{item.accurateAddress}}</text></view>
+             </view>
+             <view class='cao-z'>
+               <view class='z-price' style='color:#FE620D;font-size:24rpx'>￥<text class='shu-zi' style='font-size:46rpx;'>{{item.staffSettleAmt}}</text></view>
+            </view>
+       </view>
+       </block>
+</scroll-view>
+<block wx:if="{{arr3.length==0}}">
+<image class='img' src='../index/images/index.png' style="width:326rpx;height:319rpx;position:absolute;top:300rpx;left:0;right:0;margin:auto;"></image>
+</block>

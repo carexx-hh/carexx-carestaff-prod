@@ -1,0 +1,89 @@
+<view class='header'>
+<image src='../index/images/o-o.png' style="width:160rpx;height:160rpx;"></image>
+<view class='xiang-q'>
+<view class='title'>{{project.serviceName}}</view>
+<view class='time'>详细介绍：{{project.serviceExplain}}</view>
+<view class='price'>￥<text class='shu-zi' style='font-size:46rpx;'>{{project.servicePrice}}</text>/天<text class='holiday'> (法定节假日当天费用翻倍)</text></view>
+</view>
+</view>
+<view class='material'>
+  <view class='title'>
+<view class='z-s'></view>
+<view class='m-s'>个人资料</view>
+  </view>
+</view>
+<!--  -->
+<view class='list' style='padding-left:30rpx;box-sizing:border-box;'>
+<view class='kind'>
+<view class='kind-name'>姓名</view>
+<view class='t-k-name'>
+<text>{{project.patientName}}</text>
+</view>
+</view>
+</view>
+<!--  -->
+<view class='list' style='padding-left:30rpx;box-sizing:border-box;'>
+<view class='kind'>
+<view class='kind-name'>病区</view>
+<view class='t-k-name' style='width:40%;'>
+<text>{{project.inpatientArea}}</text>
+</view>
+</view>
+</view>
+<!--  -->
+<view class='list' style='padding-left:30rpx;box-sizing:border-box;'>
+<view class='kind'>
+<view class='kind-name'>床号</view>
+<view class='t-k-name'>
+<text>{{project.accurateAddress}}</text>
+</view>
+</view>
+</view>
+<!--  -->
+<view class='material'>
+  <view class='title'>
+<view class='z-s'></view>
+<view class='m-s'>服务信息</view>
+  </view>
+</view>
+<!--  -->
+<view class='list' style='padding-left:30rpx;box-sizing:border-box;'>
+<view class='kind'>
+<view class='kind-name'>订单服务机构</view>
+<view class='t-k-name' style='width:40%;'>
+<text>{{project.instName}}</text>
+</view>
+</view>
+</view>
+<!--  -->
+<view class='material'>
+  <view class='title'>
+<view class='z-s'></view>
+<view class='m-s'>服务时间</view>
+  </view>
+</view>
+<!--  -->
+<block wx:for='{{serviceinfo}}' wx:key='index'>
+<view class='list' style='padding-left:30rpx;box-sizing:border-box;'>
+<view class='kind'>
+<view class='kind-name' wx:key='index'>{{arr1[index]}}</view>
+<view class='t-k-name' style='width:40%;'>
+<text wx:key='index'>{{arr3[index]}}-{{arr4[index]}}</text>
+</view>
+</view>
+</view>
+</block>
+<!--  -->
+<view class='list' style="padding-left:30rpx;box-sizing:border-box;margin-top:20rpx;margin-bottom:{{project.serviceStatus==3?'178rpx':'0'}};height:170rpx;">
+<view class='kind' style='display:block;border-bottom:none;'>
+<view class='kind-name' style='line-height:99rpx;'>备注</view>
+<view class='t-k-name' style='width:100%;line-height:40rpx;display:block'>
+<text>{{project.orderRemark}}</text>
+</view>
+</view> 
+</view>
+<!--  -->
+<view class='bottom'>
+<view   class='z-price'><text style='color:#767C8C'>合计:</text>￥<text class='shu-zi' style='font-size:46rpx;'>{{project.orderAmt}}</text><text wx:if='{{xshow}}'>.00</text><text style='color:#767C8C'>（共服务{{days}}天）</text>
+</view>
+</view>

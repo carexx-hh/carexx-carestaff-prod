@@ -1,0 +1,28 @@
+<view class='header'  bindtap="{{show?'':'click_details'}}">
+    <button wx:if="{{show}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='h-button'>获取头像</button>
+    <block wx:else>
+        <view class='left' style='width:30%'>
+            <image  src="{{userInfo.avatarUrl}}"  class='tx'></image>
+        </view>
+        <view class='right' style='width:40%'>
+            <view class='name'>{{info.realName}}</view>
+            <view class='phone'  data-phone='{{phone}}'>{{info.phone}}</view>
+        </view>
+        <view style='display:flex;justify-content:flex-end;width:30%;'>
+            <image src='./images/fan_h.png' class='j-t' style='width:18rpx;height:30rpx;'></image>
+        </view>
+    </block>
+</view>
+<view class='middle'>
+<view class='set'  bindtap='click_phone'>
+<image src='./images/set.png' class='img' style='width:40rpx;height:40rpx;'></image>
+<view class='m-s'  hover-class="none">手机换绑</view>
+<image src='./images/j-t.png' class='j-t' style='width:11rpx;height:21rpx;'></image>
+</view>
+<view class='x-hx'></view>
+<view class='g-y'>
+<image src='./images/g-y.png' class='img' style='width:40rpx;height:40rpx;'></image>
+<navigator class='m-s' url='/pages/about-us/about-us' hover-class="none">关于我们</navigator>
+<image src='./images/j-t.png' class='j-t' style='width:11rpx;height:21rpx;'></image>
+</view>
+</view>

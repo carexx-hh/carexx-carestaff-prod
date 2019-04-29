@@ -1,0 +1,32 @@
+page{
+  background: #f6f6f6;
+}
+.info{
+  width: 100%;
+  padding: 0 0 0 30rpx;
+  box-sizing: border-box;
+  margin-top: 69rpx;
+  background: white;
+}
+.info .z_h{
+  width: 100%;
+  height: 99rpx;
+  display: flex;
+  border-bottom: 1rpx solid #f6f6f6;
+  padding: 0 30rpx 0 0;
+  box-sizing: border-box;
+}
+.info .z_h .z_h_name{
+  width: 50%;
+  line-height: 99rpx;
+  font-size:30rpx;
+  color:#333333;
+}
+.info .z_h .z_h_info{
+  width: 50%;
+  line-height: 99rpx;
+  font-size:28rpx;
+  color:#999999;
+  display: flex;
+  justify-content: flex-end;
+}
