@@ -16,7 +16,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.4.4",
 	"appid": "wx3db4bccb9eeafed5",
-	"projectname": "carexx-nurse",
+	"projectname": "carexx-carestaff-prod",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

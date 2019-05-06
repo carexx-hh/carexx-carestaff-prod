@@ -37,7 +37,7 @@ page{
   margin-bottom: 20rpx;
 }
 .item .xiang-q{
-  width: 267rpx;
+  width: 380rpx;
   margin-left: 31rpx;
 }
 .item .cao-z{
@@ -49,7 +49,7 @@ font-weight:bold;
 color:rgba(59,64,78,1);
 }
 .item .xiang-q .time{
-width: 421rpx;
+width: 380rpx;
 margin-top: 18rpx;
 font-size:26rpx;
 color:rgba(165,170,184,1);
